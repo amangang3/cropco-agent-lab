@@ -16,7 +16,7 @@ window.SIM_EVENTS = {
       name: 'Claude Code',
       short: 'Claude Code',
       role: 'Orchestrator',
-      sub: 'the main session — not a subagent',
+      sub: 'the main session, not a subagent',
       kind: 'orchestrator',
     },
     {
