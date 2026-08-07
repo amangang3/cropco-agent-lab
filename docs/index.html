@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bayer Agent Lab · 15.S50 Session 2</title>
-  <meta name="description" content="A 30-minute in-class exercise: do a farm-prioritisation task in your own chatbot, then watch a team of agents do the same task." />
+  <meta name="description" content="A 30-minute in-class exercise: do a farm-prioritisation task in your own chatbot, then watch a team of three agents do the same task." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -20,9 +20,9 @@
       <p class="hero__course">15.S50 · Leading Agentic AI Transformation</p>
       <h1 class="hero__title">Bayer Agent Lab</h1>
       <p class="hero__lede">
-        One task, done twice. First by you, in whatever chatbot you already use.
-        Then by a team of three agents, which you watch work. Thirty minutes,
-        all of it in this room.
+        You're going to do the same piece of sales work twice. Once yourself, in
+        whatever chatbot you already use. Once by handing it to three agents and
+        watching them work. Thirty minutes, all of it in this room.
       </p>
       <div class="hero__actions">
         <a class="btn btn--primary" href="#part1">Start — your turn first</a>
@@ -44,12 +44,12 @@
     <section id="brief" class="section">
       <div class="section__head">
         <p class="eyebrow">The situation</p>
-        <h2>Ten farms, four reps, eighteen months of messy notes</h2>
+        <h2>Which farms do we go after?</h2>
         <p class="lede">
-          You are a commercial operations analyst at Bayer Crop Science. Bayer
-          reaches about 10,000 of the roughly 40,000 major row-crop farms in the
-          United States, and quadrupling the field sales force to reach the rest
-          is not something anyone is going to fund.
+          You work in commercial operations at Bayer Crop Science. Bayer sells to
+          roughly 10,000 of the 40,000 big row-crop farms in the country. Nobody
+          is going to fund four times the sales force to reach the rest, so the
+          question is which farms to pick — and who decides.
         </p>
       </div>
 
@@ -57,18 +57,17 @@
         <article class="brief-card">
           <h3>What you have</h3>
           <p>
-            A regional file: ten farms, a CRM row each, and call notes written by
-            four different reps over eighteen months. The notes are uneven,
-            contradictory in places, and occasionally missing. That is on purpose
-            and it is representative.
+            Ten farms. A CRM row for each, plus call notes from four different
+            reps over eighteen months. The notes are uneven. Some contradict the
+            CRM. One farm has almost nothing. Real files look like this.
           </p>
         </article>
         <article class="brief-card">
           <h3>What the job is</h3>
           <p>
-            Profile each farm. Score all ten against the rubric. Rank them. Draft
-            outreach to the top five. And set aside anything you cannot judge
-            honestly, for a person to look at, rather than guessing.
+            Profile each farm, score it against the rubric, rank them, and write
+            outreach to the top five. If you can't judge a farm honestly, don't
+            guess — set it aside for a person.
           </p>
         </article>
         <article class="brief-card brief-card--accent">
@@ -77,18 +76,17 @@
             <li><span>8 min</span> You do it, in your own chatbot</li>
             <li><span>4 min</span> Meet the agent team</li>
             <li><span>5 min</span> Watch them do the same task</li>
-            <li><span>6 min</span> Audit what they produced</li>
-            <li><span>7 min</span> Discuss together</li>
+            <li><span>6 min</span> Read what they produced</li>
+            <li><span>7 min</span> Talk about the difference</li>
           </ol>
         </article>
       </div>
 
       <aside class="callout">
         <p>
-          <strong>You are not expected to finish part one.</strong> Where you get
-          to in eight minutes is the measurement — it is the number we compare
-          everything else against. Do not skip ahead to part three; the order is
-          the point.
+          <strong>You won't finish part one, and you're not meant to.</strong>
+          How far you get in eight minutes is the number everything else gets
+          compared against. Work the farms in order and don't skip ahead.
         </p>
       </aside>
     </section>
@@ -96,11 +94,11 @@
     <section id="part1" class="section section--workspace">
       <div class="section__head">
         <p class="eyebrow">Part 1 · 8 minutes · you</p>
-        <h2>Do the task yourself, in a chat window</h2>
+        <h2>Do the task yourself</h2>
         <p class="lede">
-          Open whatever you already use — ChatGPT, Claude, Gemini, Copilot, free
-          tier, already signed in. Copy the brief below into it, then start
-          feeding it farms from this page. Work the way you normally would.
+          Open the chatbot you already use — ChatGPT, Claude, Gemini, whatever
+          you're signed into. Paste the brief, then feed it farms from this page.
+          Most people get through three or four.
         </p>
       </div>
 
@@ -128,7 +126,7 @@
         <div class="workspace__main">
           <article class="panel">
             <div class="panel__bar">
-              <h3>1 · Paste this into your chatbot first</h3>
+              <h3>1 · Paste this in first</h3>
               <button type="button" class="btn btn--small" data-copy="brief">Copy brief</button>
             </div>
             <pre class="paste" id="brief-text">I'm a commercial operations analyst at Bayer Crop Science. I have a regional file of 10 US farms. For each one I have a CRM row and a set of field-rep call notes written by four different reps over the last eighteen months.
@@ -142,7 +140,7 @@ I'll paste the rep notes in. Let's start.</pre>
 
           <article class="panel">
             <div class="panel__bar">
-              <h3>2 · Feed farms in, in order</h3>
+              <h3>2 · Then feed it farms, in order</h3>
               <div class="panel__bar-actions">
                 <button type="button" class="btn btn--small" id="copy-farm">Copy this farm</button>
                 <button type="button" class="btn btn--small btn--accent" id="mark-done">Mark complete</button>
@@ -164,17 +162,17 @@ I'll paste the rep notes in. Let's start.</pre>
             <pre class="paste paste--note" id="farm-note"></pre>
 
             <p class="fineprint">
-              Paste in order — do not hunt for the interesting ones. You may paste
-              several at once if that is how you would normally work.
+              Paste several at once if that's how you'd normally work. Just don't
+              go hunting for the interesting ones.
             </p>
           </article>
 
           <article class="panel panel--rules">
-            <h3>Three things while you work</h3>
+            <h3>While you work</h3>
             <ul>
-              <li><strong>Do not sandbag it.</strong> Push the model, paste several farms at once, argue with its scoring. A rigged comparison teaches nothing and you would spot the rigging anyway.</li>
-              <li><strong>Count what you actually finish</strong> — profiled and scored, not started.</li>
-              <li><strong>Notice where the time goes.</strong> How much of the eight minutes was on farms, and how much was on the chat window — pasting, scrolling, re-explaining the rubric?</li>
+              <li><strong>Push it hard.</strong> Paste several farms at once, argue with its scoring, make it defend a number. A rigged comparison teaches nobody anything.</li>
+              <li><strong>Count only what you finish</strong> — profiled and scored, not started.</li>
+              <li><strong>Notice where the time goes.</strong> How much of it was farms, and how much was the chat window — pasting, scrolling, reminding it of the rubric?</li>
             </ul>
           </article>
         </div>
@@ -192,11 +190,11 @@ I'll paste the rep notes in. Let's start.</pre>
     <section id="team" class="section">
       <div class="section__head">
         <p class="eyebrow">Part 2 · 4 minutes · together</p>
-        <h2>Meet the team you are about to hand it to</h2>
+        <h2>The team you're handing it to</h2>
         <p class="lede">
-          Three agents. Nobody wrote code to build them — each one is a page of
-          plain English saying who it is, what it is allowed to touch, and when
-          it must stop. That page is the whole design.
+          Three agents. There's no code behind them — each one is a page of plain
+          English saying what it does, what it's allowed to read, and when to
+          stop.
         </p>
       </div>
 
@@ -204,12 +202,12 @@ I'll paste the rep notes in. Let's start.</pre>
         <article class="team-card team-card--researcher">
           <p class="team-card__n">1</p>
           <h3>farm-researcher</h3>
-          <p class="team-card__role">Reads · does not judge</p>
+          <p class="team-card__role">Reads · doesn't judge</p>
           <p>
-            Takes a CRM row and a rep's call notes and turns them into a
-            structured profile. It is told to <strong>flag problems rather than
-            tidy them away</strong>: contradictions, missing information, unclear
-            authority, and any instruction not to contact the customer.
+            Turns a CRM row and a rep's notes into a profile. Its main job is to
+            <strong>flag problems instead of tidying them away</strong> — a number
+            that contradicts the CRM, missing notes, nobody who can sign, a
+            customer who asked not to be contacted.
           </p>
           <p class="team-card__foot">Two copies run at once, five farms each.</p>
         </article>
@@ -219,12 +217,12 @@ I'll paste the rep notes in. Let's start.</pre>
           <h3>fit-scorer</h3>
           <p class="team-card__role">Scores · and refuses to</p>
           <p>
-            Applies the rubric — and only the rubric. It also carries the rule
-            that decides this exercise: <strong>a farm carrying a flag is not
-            scored at all</strong>. Not scored low. Absent, with a written reason,
-            even if it would obviously rank first.
+            Applies the rubric, and nothing but the rubric. It also carries the
+            rule this whole exercise turns on: <strong>a flagged farm doesn't get
+            a score at all</strong>. Not a low score — no score, with a written
+            reason, even if it would have come first.
           </p>
-          <p class="team-card__foot">Cannot start until all ten profiles exist.</p>
+          <p class="team-card__foot">Can't start until all ten profiles exist.</p>
         </article>
 
         <article class="team-card team-card--writer">
@@ -232,46 +230,200 @@ I'll paste the rep notes in. Let's start.</pre>
           <h3>outreach-writer</h3>
           <p class="team-card__role">Writes · to five people</p>
           <p>
-            Drafts the outreach. It is given the ranked list <em>and</em> the
-            human-review list, so it knows who <strong>not</strong> to write to
-            rather than only who to write to. 120 words, one specific detail, one
-            small ask.
+            Drafts the outreach. It gets the ranked list <em>and</em> the
+            review list, so it knows who <strong>not</strong> to write to as well
+            as who to write to. 120 words, one specific detail, one small ask.
           </p>
           <p class="team-card__foot">Runs last, on the top five only.</p>
         </article>
       </div>
 
-      <div class="pipeline" aria-label="Agent pipeline">
-        <div class="pipeline__step">
-          <span class="pipeline__n">1</span>
-          <strong>research</strong>
-          <span>×2, in parallel</span>
+      <figure class="diagram">
+        <figcaption class="diagram__cap">
+          <strong>How the work moves between them.</strong>
+          They never talk to each other. Each one writes a file and the next one
+          reads it — which is also why you can check their work afterwards.
+        </figcaption>
+        <div class="diagram__scroll">
+          <svg viewBox="0 0 720 800" role="img" aria-labelledby="flow-title flow-desc" class="diagram__svg">
+            <title id="flow-title">How the three agents hand work to each other</title>
+            <desc id="flow-desc">
+              The ten farms are split between two farm-researcher agents running at
+              the same time. Each writes a profiles file. The fit-scorer cannot
+              start until both files exist. It writes a ranked list and a
+              human-review list. The outreach-writer reads both, and writes five
+              drafts.
+            </desc>
+
+            <defs>
+              <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#7d9488" />
+              </marker>
+            </defs>
+
+            <!-- Stage 1 · the file -->
+            <rect x="180" y="16" width="360" height="58" rx="10" fill="#eef4f0" stroke="#c5d4cb" />
+            <text x="360" y="41" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" fill="#132419">data/ — 10 farms</text>
+            <text x="360" y="60" text-anchor="middle" font-family="Figtree, sans-serif" font-size="12.5" fill="#3a4f42">one CRM row and one rep-notes file each</text>
+
+            <path d="M 300 74 L 180 116" stroke="#7d9488" stroke-width="1.5" fill="none" marker-end="url(#arw)" />
+            <path d="M 420 74 L 540 116" stroke="#7d9488" stroke-width="1.5" fill="none" marker-end="url(#arw)" />
+
+            <!-- Step label 1 -->
+            <text x="20" y="112" font-family="Figtree, sans-serif" font-size="12" font-weight="700" fill="#3f8f6a" letter-spacing="0.08em">STEP 1 — AT THE SAME TIME</text>
+
+            <!-- Stage 2 · two researchers -->
+            <rect x="20" y="124" width="320" height="86" rx="10" fill="#ffffff" stroke="#3f8f6a" stroke-width="2" />
+            <text x="38" y="150" font-family="JetBrains Mono, monospace" font-size="13.5" fill="#132419">farm-researcher</text>
+            <text x="38" y="170" font-family="Figtree, sans-serif" font-size="12.5" fill="#3a4f42">batch A · farms 01–05</text>
+            <text x="38" y="192" font-family="Figtree, sans-serif" font-size="12.5" fill="#3a4f42">reads notes, writes profiles, flags problems</text>
+
+            <rect x="380" y="124" width="320" height="86" rx="10" fill="#ffffff" stroke="#3f8f6a" stroke-width="2" />
+            <text x="398" y="150" font-family="JetBrains Mono, monospace" font-size="13.5" fill="#132419">farm-researcher</text>
+            <text x="398" y="170" font-family="Figtree, sans-serif" font-size="12.5" fill="#3a4f42">batch B · farms 06–10</text>
+            <text x="398" y="192" font-family="Figtree, sans-serif" font-size="12.5" fill="#3a4f42">reads notes, writes profiles, flags problems</text>
+
+            <path d="M 180 210 L 180 238" stroke="#7d9488" stroke-width="1.5" fill="none" marker-end="url(#arw)" />
+            <path d="M 540 210 L 540 238" stroke="#7d9488" stroke-width="1.5" fill="none" marker-end="url(#arw)" />
+
+            <!-- Stage 3 · the two profile files -->
+            <rect x="46" y="244" width="268" height="40" rx="8" fill="#f2fbf5" stroke="#a9cdb8" />
+            <text x="180" y="269" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="#1f4d34">profiles-farm-01-to-farm-05.md</text>
+
+            <rect x="406" y="244" width="268" height="40" rx="8" fill="#f2fbf5" stroke="#a9cdb8" />
+            <text x="540" y="269" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="#1f4d34">profiles-farm-06-to-farm-10.md</text>
+
+            <path d="M 180 284 L 180 312" stroke="#7d9488" stroke-width="1.5" fill="none" marker-end="url(#arw)" />
+            <path d="M 540 284 L 540 312" stroke="#7d9488" stroke-width="1.5" fill="none" marker-end="url(#arw)" />
+
+            <!-- Stage 4 · the barrier -->
+            <rect x="20" y="316" width="680" height="46" rx="10" fill="#fff9e8" stroke="#c49a2a" stroke-dasharray="6 4" />
+            <text x="360" y="337" text-anchor="middle" font-family="Figtree, sans-serif" font-size="13" font-weight="700" fill="#8a6a12">The scorer waits here until both files exist</text>
+            <text x="360" y="354" text-anchor="middle" font-family="Figtree, sans-serif" font-size="12" fill="#3a4f42">without this, it would rank half the region and never mention it</text>
+
+            <path d="M 360 362 L 360 392" stroke="#7d9488" stroke-width="1.5" fill="none" marker-end="url(#arw)" />
+
+            <!-- Step label 2 -->
+            <text x="20" y="388" font-family="Figtree, sans-serif" font-size="12" font-weight="700" fill="#8a6a12" letter-spacing="0.08em">STEP 2</text>
+
+            <!-- Stage 5 · scorer -->
+            <rect x="150" y="398" width="420" height="86" rx="10" fill="#ffffff" stroke="#c49a2a" stroke-width="2" />
+            <text x="172" y="424" font-family="JetBrains Mono, monospace" font-size="13.5" fill="#132419">fit-scorer</text>
+            <text x="172" y="444" font-family="Figtree, sans-serif" font-size="12.5" fill="#3a4f42">scores all ten against the rubric</text>
+            <text x="172" y="466" font-family="Figtree, sans-serif" font-size="12.5" fill="#3a4f42">and pulls the flagged ones out of the ranking entirely</text>
+
+            <path d="M 300 484 L 210 516" stroke="#7d9488" stroke-width="1.5" fill="none" marker-end="url(#arw)" />
+            <path d="M 420 484 L 510 516" stroke="#7d9488" stroke-width="1.5" fill="none" marker-end="url(#arw)" />
+
+            <!-- Stage 6 · two outputs -->
+            <rect x="46" y="522" width="290" height="52" rx="8" fill="#f2fbf5" stroke="#a9cdb8" />
+            <text x="191" y="544" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="#1f4d34">ranked-farms.md</text>
+            <text x="191" y="562" text-anchor="middle" font-family="Figtree, sans-serif" font-size="11.5" fill="#3a4f42">the six it would score</text>
+
+            <rect x="384" y="522" width="290" height="52" rx="8" fill="#fdf1ee" stroke="#d9a596" />
+            <text x="529" y="544" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="#8f2f1f">NEEDS-HUMAN-REVIEW.md</text>
+            <text x="529" y="562" text-anchor="middle" font-family="Figtree, sans-serif" font-size="11.5" fill="#3a4f42">the four it wouldn't</text>
+
+            <path d="M 191 574 L 300 616" stroke="#7d9488" stroke-width="1.5" fill="none" marker-end="url(#arw)" />
+            <path d="M 529 574 L 420 616" stroke="#7d9488" stroke-width="1.5" fill="none" marker-end="url(#arw)" />
+
+            <!-- Step label 3 -->
+            <text x="20" y="612" font-family="Figtree, sans-serif" font-size="12" font-weight="700" fill="#5b7fb0" letter-spacing="0.08em">STEP 3</text>
+
+            <!-- Stage 7 · writer -->
+            <rect x="150" y="622" width="420" height="86" rx="10" fill="#ffffff" stroke="#5b7fb0" stroke-width="2" />
+            <text x="172" y="648" font-family="JetBrains Mono, monospace" font-size="13.5" fill="#132419">outreach-writer</text>
+            <text x="172" y="668" font-family="Figtree, sans-serif" font-size="12.5" fill="#3a4f42">reads both lists — the top five, and who is off limits</text>
+            <text x="172" y="690" font-family="Figtree, sans-serif" font-size="12.5" fill="#3a4f42">writes to the five, and to nobody on the review list</text>
+
+            <path d="M 360 708 L 360 736" stroke="#7d9488" stroke-width="1.5" fill="none" marker-end="url(#arw)" />
+
+            <rect x="196" y="742" width="330" height="44" rx="8" fill="#f2fbf5" stroke="#a9cdb8" />
+            <text x="361" y="769" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="#1f4d34">outreach-drafts.md</text>
+          </svg>
         </div>
-        <span class="pipeline__arrow" aria-hidden="true">→</span>
-        <div class="pipeline__step">
-          <span class="pipeline__n">2</span>
-          <strong>score</strong>
-          <span>waits for all ten</span>
-        </div>
-        <span class="pipeline__arrow" aria-hidden="true">→</span>
-        <div class="pipeline__step">
-          <span class="pipeline__n">3</span>
-          <strong>write</strong>
-          <span>top five only</span>
-        </div>
-      </div>
+      </figure>
 
       <ul class="agent-points">
-        <li><strong>No agent is the boss.</strong> There is no manager agent. The order is fixed by the person who set the team up: research, then score, then write.</li>
-        <li><strong>They never talk to each other.</strong> Every handoff is a file. One agent writes it, the next one reads it. That is the entire communication protocol, and it is why you can audit what happened.</li>
-        <li><strong>The judgement is in the writing, not the model.</strong> When you see it stop on a farm in a moment, the reason will be a sentence somebody typed — not something the model worked out.</li>
+        <li><strong>Nobody is in charge.</strong> One session starts each agent in the order a person specified, and waits when it's told to wait. It doesn't judge any farm itself.</li>
+        <li><strong>The order isn't arbitrary.</strong> Research can happen in parallel because the farms don't depend on each other. Scoring can't start early, because a ranking built on half the file would look complete and be wrong.</li>
+      </ul>
+
+      <div class="section__head section__head--sub">
+        <h3 class="human-head">So where does a person come in?</h3>
+        <p class="lede">
+          The run you're about to watch takes three and a half minutes and nobody
+          touches it. It's easy to conclude there's no human in this at all.
+          There are three, and they matter more than the agents do.
+        </p>
+      </div>
+
+      <figure class="diagram diagram--human">
+        <div class="diagram__scroll">
+          <svg viewBox="0 0 720 430" role="img" aria-labelledby="human-title human-desc" class="diagram__svg">
+            <title id="human-title">The three places a person is required</title>
+            <desc id="human-desc">
+              Before the run, a person writes the rules: the rubric weights, the
+              stop rule, and who not to write to. At the start, a person sets the
+              goal in one prompt. Then the agents run for three and a half minutes
+              with no human input. Afterwards, a person decides: four farms come
+              back unscored and five drafts are held until checked.
+            </desc>
+
+            <defs>
+              <marker id="arw2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#7d9488" />
+              </marker>
+            </defs>
+
+            <!-- BEFORE -->
+            <rect x="14" y="14" width="692" height="118" rx="12" fill="#ffffff" stroke="#c5d4cb" />
+            <rect x="14" y="14" width="5" height="118" rx="2.5" fill="#1f4d34" />
+            <text x="36" y="42" font-family="Figtree, sans-serif" font-size="12" font-weight="700" fill="#1f4d34" letter-spacing="0.08em">BEFORE — A PERSON WRITES THE RULES</text>
+            <text x="36" y="66" font-family="Figtree, sans-serif" font-size="13.5" fill="#132419">None of this comes from the model. Somebody who understands the business decided it and typed it.</text>
+            <rect x="36" y="80" width="200" height="36" rx="7" fill="#eef4f0" stroke="#c5d4cb" />
+            <text x="136" y="103" text-anchor="middle" font-family="Figtree, sans-serif" font-size="12" fill="#3a4f42">what the rubric weighs</text>
+            <rect x="248" y="80" width="216" height="36" rx="7" fill="#fff9e8" stroke="#c49a2a" />
+            <text x="356" y="103" text-anchor="middle" font-family="Figtree, sans-serif" font-size="12" fill="#8a6a12">when to stop and hand it back</text>
+            <rect x="476" y="80" width="208" height="36" rx="7" fill="#eef4f0" stroke="#c5d4cb" />
+            <text x="580" y="103" text-anchor="middle" font-family="Figtree, sans-serif" font-size="12" fill="#3a4f42">who must never be written to</text>
+
+            <path d="M 360 132 L 360 158" stroke="#7d9488" stroke-width="1.5" fill="none" marker-end="url(#arw2)" />
+            <text x="372" y="150" font-family="Figtree, sans-serif" font-size="12" font-style="italic" fill="#3a4f42">then one prompt sets the goal</text>
+
+            <!-- THE RUN -->
+            <rect x="14" y="164" width="692" height="96" rx="12" fill="#0d1a12" />
+            <text x="36" y="194" font-family="Figtree, sans-serif" font-size="12" font-weight="700" fill="#7fd39a" letter-spacing="0.08em">THE RUN — NOBODY TOUCHES IT</text>
+            <text x="36" y="220" font-family="Figtree, sans-serif" font-size="13.5" fill="#d7e8dc">Three agents, ten farms, 3m 32s. No questions asked, no approvals, no steering.</text>
+            <text x="36" y="243" font-family="Figtree, sans-serif" font-size="13" fill="#8aa694">This is the part that looks like the whole thing. It isn't.</text>
+
+            <path d="M 360 260 L 360 286" stroke="#7d9488" stroke-width="1.5" fill="none" marker-end="url(#arw2)" />
+
+            <!-- AFTER -->
+            <rect x="14" y="292" width="692" height="124" rx="12" fill="#ffffff" stroke="#c5d4cb" />
+            <rect x="14" y="292" width="5" height="124" rx="2.5" fill="#8f2f1f" />
+            <text x="36" y="320" font-family="Figtree, sans-serif" font-size="12" font-weight="700" fill="#8f2f1f" letter-spacing="0.08em">AFTER — A PERSON DECIDES</text>
+            <text x="36" y="344" font-family="Figtree, sans-serif" font-size="13.5" fill="#132419">The most useful thing it produces is the list of things it wouldn't do.</text>
+            <rect x="36" y="358" width="318" height="44" rx="7" fill="#fdf1ee" stroke="#d9a596" />
+            <text x="195" y="376" text-anchor="middle" font-family="Figtree, sans-serif" font-size="12.5" font-weight="700" fill="#8f2f1f">4 farms handed back unscored</text>
+            <text x="195" y="393" text-anchor="middle" font-family="Figtree, sans-serif" font-size="11.5" fill="#3a4f42">each with the question a person has to answer</text>
+            <rect x="366" y="358" width="318" height="44" rx="7" fill="#fdf1ee" stroke="#d9a596" />
+            <text x="525" y="376" text-anchor="middle" font-family="Figtree, sans-serif" font-size="12.5" font-weight="700" fill="#8f2f1f">5 drafts that nobody has sent</text>
+            <text x="525" y="393" text-anchor="middle" font-family="Figtree, sans-serif" font-size="11.5" fill="#3a4f42">including claims it invented and can't back up</text>
+          </svg>
+        </div>
+      </figure>
+
+      <ul class="agent-points agent-points--human">
+        <li><strong>The judgement is in the writing, not the model.</strong> In a few minutes you'll watch it throw out the biggest account in the file. It doesn't work that out. It follows a rule somebody typed.</li>
+        <li><strong>Nothing here reaches a customer.</strong> The run ends at a draft. Deciding to send one is a separate act, by a person, and the team is built on the assumption that it will be.</li>
       </ul>
 
       <details class="details">
         <summary>Go deeper — read the actual instruction files</summary>
         <div class="details__body">
           <p class="details__intro">
-            These are the three files, unedited. The rule that matters most is in
+            The three files, unedited. The rule that matters is in
             <code>fit-scorer</code>, under “Confidence, and when to stop scoring”.
           </p>
           <div class="agent-tabs" id="agent-tabs">
@@ -285,17 +437,17 @@ I'll paste the rep notes in. Let's start.</pre>
     <section id="run" class="section section--run">
       <div class="section__head">
         <p class="eyebrow">Part 3 · 5 minutes · watch</p>
-        <h2>Now hand it over</h2>
+        <h2>Hand it over</h2>
         <p class="lede">
-          One instruction goes in. Nobody answers a question, approves a step, or
-          steers. Press play and watch the same task you just did get worked by
-          the team.
+          One instruction goes in. Then nobody types anything for three and a half
+          minutes. You're watching a recording of a real run — the timings, the
+          files, the flags and the scores all happened.
         </p>
       </div>
 
       <article class="panel panel--prompt">
         <div class="panel__bar">
-          <h3>The one thing a human typed</h3>
+          <h3>The one thing a person typed</h3>
           <span class="tag tag--quiet">then walked away</span>
         </div>
         <pre class="paste paste--compact" id="prompt-text">Work the full regional file in data/ — all 10 farms, none skipped.
@@ -310,6 +462,11 @@ thing in this file you would most want a person to look at before anything
 gets sent.
 
 Do not ask me for confirmation between steps. Go.</pre>
+        <p class="fineprint">
+          Notice what this doesn't say. It sets the goal and the order. It says
+          nothing about how to judge any individual farm — that was settled
+          earlier, in the rubric and the three agent files.
+        </p>
       </article>
 
       <div class="beats" id="run-beats" aria-label="What to watch for">
@@ -317,15 +474,15 @@ Do not ask me for confirmation between steps. Go.</pre>
         <ol class="beats__list">
           <li class="beat" data-beat="parallel">
             <span class="beat__dot" aria-hidden="true"></span>
-            <span class="beat__text"><strong>Two agents working at once.</strong> Not one thing after another.</span>
+            <span class="beat__text"><strong>Two agents working at once.</strong> Not one after the other.</span>
           </li>
           <li class="beat" data-beat="barrier">
             <span class="beat__dot" aria-hidden="true"></span>
-            <span class="beat__text"><strong>The scorer is made to wait.</strong> Something is holding it back.</span>
+            <span class="beat__text"><strong>The scorer gets held back.</strong> Something is making it wait.</span>
           </li>
           <li class="beat" data-beat="stop">
             <span class="beat__dot" aria-hidden="true"></span>
-            <span class="beat__text"><strong>The biggest account is thrown out.</strong> Watch for why.</span>
+            <span class="beat__text"><strong>The biggest account gets thrown out.</strong> Watch for why.</span>
           </li>
         </ol>
       </div>
@@ -334,7 +491,7 @@ Do not ask me for confirmation between steps. Go.</pre>
         <div class="console__chrome">
           <div class="console__dots" aria-hidden="true"><span></span><span></span><span></span></div>
           <p class="console__title">bayer-agent-lab — agent run</p>
-          <span class="console__badge" id="run-badge" title="A recording of a real run, replayed here so it works without accounts or wifi.">recorded run · replay</span>
+          <span class="console__badge" id="run-badge" title="A recording of a real run, played back here so the class doesn't depend on thirty accounts and one wifi network.">recorded run · replay</span>
         </div>
 
         <div class="console__bar">
@@ -373,7 +530,7 @@ Do not ask me for confirmation between steps. Go.</pre>
               <ol class="rankmini" id="run-rank"><li class="rankmini__empty">none yet</li></ol>
             </div>
             <div class="side__block side__block--review">
-              <h4>Sent to human review</h4>
+              <h4>Handed back to a person</h4>
               <ul class="reviewmini" id="run-review"><li class="reviewmini__empty">none yet</li></ul>
             </div>
           </aside>
@@ -383,7 +540,7 @@ Do not ask me for confirmation between steps. Go.</pre>
       <div class="run-summary" id="run-summary" hidden>
         <div class="run-summary__head">
           <h3>Run complete</h3>
-          <p>You typed one thing. You were not asked a single question.</p>
+          <p>One prompt in. Not a single question back.</p>
         </div>
         <div class="run-summary__stats" id="run-summary-stats"></div>
         <a class="btn btn--primary" href="#output">Now read what it produced →</a>
@@ -395,29 +552,30 @@ Do not ask me for confirmation between steps. Go.</pre>
         <p class="eyebrow">Part 4 · 6 minutes · in pairs</p>
         <h2>Read it like it landed in your inbox</h2>
         <p class="lede">
-          Three files came out. Turn to the person next to you and work the three
-          questions below. The reading is the exercise — the speed was the least
-          interesting part of what you just watched.
+          Three files came out. Turn to the person next to you and work these
+          three questions. The reading is the exercise — the speed was the least
+          interesting thing you just watched.
         </p>
       </div>
 
       <div class="audit">
         <article class="audit__q">
           <p class="audit__n">Q1</p>
-          <p>Would you send those five outreach drafts as they are written?</p>
+          <p>Would you send those five drafts as they're written?</p>
         </article>
         <article class="audit__q">
           <p class="audit__n">Q2</p>
           <p>
-            Four farms are on the human-review list. Which one would have done the
-            most damage if it had quietly been scored and mailed instead?
+            Four farms got handed back. Which one would have done the most damage
+            if it had quietly been scored and mailed instead?
           </p>
         </article>
         <article class="audit__q audit__q--key">
           <p class="audit__n">Q3</p>
           <p>
-            <strong>Why did the system stop on that farm?</strong> Not “how did it
-            know” — <em>where is the instruction that made it stop?</em>
+            <strong>Why did it stop on that farm?</strong> Not how it knew —
+            <em>where is the sentence that made it stop, and who would have had
+            to write it?</em>
           </p>
         </article>
       </div>
@@ -427,25 +585,34 @@ Do not ask me for confirmation between steps. Go.</pre>
         <div class="outputs__panels"></div>
       </div>
 
+      <aside class="callout callout--soft">
+        <p>
+          <strong>Read the end of <code>outreach-drafts.md</code>.</strong>
+          Under “Before any of these are sent”, the writer lists what it can't
+          vouch for: names it took from call notes, a data package it isn't sure
+          exists, a meeting it committed someone to. It flagged those itself and
+          then stopped. Somebody still has to go and check them.
+        </p>
+      </aside>
+
       <details class="details">
         <summary>Go deeper — if you finish early</summary>
         <div class="details__body">
           <ul class="deeper">
             <li>
-              Find the four lines in <code>fit-scorer</code> that saved farm-09.
-              They are under “Confidence, and when to stop scoring”. Read them
-              aloud to your partner and decide who in a real company would have
-              had to write them.
+              Find the lines in <code>fit-scorer</code> that saved farm-09, under
+              “Confidence, and when to stop scoring”. Read them to your partner
+              and work out whose job it would be to write them in a real company.
             </li>
             <li>
-              Now break it on purpose. If you deleted the words <em>“even if it
-              would obviously rank first”</em>, what comes out of this run
-              instead — and who would have caught it?
+              Break it on purpose. If you deleted the words <em>“even if it would
+              obviously rank first”</em>, what comes out of this run instead — and
+              who would have caught it?
             </li>
             <li>
-              The two researchers ran at the same time; the scorer was held back
-              until both finished. What would have been produced if nobody had
-              imposed that wait?
+              The scorer was held back until both researchers finished. What gets
+              produced if nobody imposes that wait, and would you be able to tell
+              from the output?
             </li>
           </ul>
         </div>
