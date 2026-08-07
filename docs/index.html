@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bayer Agent Lab · 15.S50 Session 2</title>
+  <meta name="description" content="A 30-minute in-class exercise: do a farm-prioritisation task in your own chatbot, then watch a team of agents do the same task." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/lab.css" />
+  <link rel="stylesheet" href="assets/run.css" />
+</head>
+<body>
+  <a class="skip" href="#brief">Skip to content</a>
+
+  <header class="hero">
+    <div class="hero__sky" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <p class="hero__course">15.S50 · Leading Agentic AI Transformation</p>
+      <h1 class="hero__title">Bayer Agent Lab</h1>
+      <p class="hero__lede">
+        One task, done twice. First by you, in whatever chatbot you already use.
+        Then by a team of three agents, which you watch work. Thirty minutes,
+        all of it in this room.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#part1">Start — your turn first</a>
+        <a class="btn btn--ghost" href="#brief">Read the situation</a>
+      </div>
+      <p class="hero__meta">Nothing to install · nothing to sign into · nothing due afterwards</p>
+    </div>
+  </header>
+
+  <nav class="toc" aria-label="Lab sections">
+    <a href="#brief">The situation</a>
+    <a href="#part1">1 · Your turn</a>
+    <a href="#team">2 · The team</a>
+    <a href="#run">3 · The run</a>
+    <a href="#output">4 · The output</a>
+  </nav>
+
+  <main>
+    <section id="brief" class="section">
+      <div class="section__head">
+        <p class="eyebrow">The situation</p>
+        <h2>Ten farms, four reps, eighteen months of messy notes</h2>
+        <p class="lede">
+          You are a commercial operations analyst at Bayer Crop Science. Bayer
+          reaches about 10,000 of the roughly 40,000 major row-crop farms in the
+          United States, and quadrupling the field sales force to reach the rest
+          is not something anyone is going to fund.
+        </p>
+      </div>
+
+      <div class="brief-grid">
+        <article class="brief-card">
+          <h3>What you have</h3>
+          <p>
+            A regional file: ten farms, a CRM row each, and call notes written by
+            four different reps over eighteen months. The notes are uneven,
+            contradictory in places, and occasionally missing. That is on purpose
+            and it is representative.
+          </p>
+        </article>
+        <article class="brief-card">
+          <h3>What the job is</h3>
+          <p>
+            Profile each farm. Score all ten against the rubric. Rank them. Draft
+            outreach to the top five. And set aside anything you cannot judge
+            honestly, for a person to look at, rather than guessing.
+          </p>
+        </article>
+        <article class="brief-card brief-card--accent">
+          <h3>The next thirty minutes</h3>
+          <ol class="mini-runsheet">
+            <li><span>8 min</span> You do it, in your own chatbot</li>
+            <li><span>4 min</span> Meet the agent team</li>
+            <li><span>5 min</span> Watch them do the same task</li>
+            <li><span>6 min</span> Audit what they produced</li>
+            <li><span>7 min</span> Discuss together</li>
+          </ol>
+        </article>
+      </div>
+
+      <aside class="callout">
+        <p>
+          <strong>You are not expected to finish part one.</strong> Where you get
+          to in eight minutes is the measurement — it is the number we compare
+          everything else against. Do not skip ahead to part three; the order is
+          the point.
+        </p>
+      </aside>
+    </section>
+
+    <section id="part1" class="section section--workspace">
+      <div class="section__head">
+        <p class="eyebrow">Part 1 · 8 minutes · you</p>
+        <h2>Do the task yourself, in a chat window</h2>
+        <p class="lede">
+          Open whatever you already use — ChatGPT, Claude, Gemini, Copilot, free
+          tier, already signed in. Copy the brief below into it, then start
+          feeding it farms from this page. Work the way you normally would.
+        </p>
+      </div>
+
+      <div class="workspace">
+        <aside class="timer-panel" aria-labelledby="timer-label">
+          <p id="timer-label" class="timer-panel__label">Your eight minutes</p>
+          <p class="timer" id="timer-display" aria-live="polite">8:00</p>
+          <div class="timer-panel__controls">
+            <button type="button" class="btn btn--primary" id="timer-start">Start</button>
+            <button type="button" class="btn btn--ghost" id="timer-reset">Reset</button>
+          </div>
+          <p class="timer-panel__hint" id="timer-hint">
+            Start the timer when you paste the brief. Stop wherever you are when it hits zero.
+          </p>
+          <div class="progress-block">
+            <p class="progress-block__label">Farms you fully completed</p>
+            <p class="progress-block__value"><span id="done-count">0</span> / <span id="farm-total">10</span></p>
+            <div class="progress-bar" aria-hidden="true">
+              <div class="progress-bar__fill" id="progress-fill"></div>
+            </div>
+            <p class="progress-block__note">Profiled <em>and</em> scored. Not started.</p>
+          </div>
+        </aside>
+
+        <div class="workspace__main">
+          <article class="panel">
+            <div class="panel__bar">
+              <h3>1 · Paste this into your chatbot first</h3>
+              <button type="button" class="btn btn--small" data-copy="brief">Copy brief</button>
+            </div>
+            <pre class="paste" id="brief-text">I'm a commercial operations analyst at Bayer Crop Science. I have a regional file of 10 US farms. For each one I have a CRM row and a set of field-rep call notes written by four different reps over the last eighteen months.
+
+I need to: build a profile of each farm, score all 10 against a rubric, rank them, and draft outreach emails to the top five. Anything I can't score honestly, I need to set aside for a person to look at rather than guess.
+
+The rubric is: Scale 25%, Portfolio fit 25%, Technology posture 20%, Switching readiness 20%, Relationship 10%. Each scored 0–5, total out of 100.
+
+I'll paste the rep notes in. Let's start.</pre>
+          </article>
+
+          <article class="panel">
+            <div class="panel__bar">
+              <h3>2 · Feed farms in, in order</h3>
+              <div class="panel__bar-actions">
+                <button type="button" class="btn btn--small" id="copy-farm">Copy this farm</button>
+                <button type="button" class="btn btn--small btn--accent" id="mark-done">Mark complete</button>
+              </div>
+            </div>
+
+            <div class="farm-nav">
+              <button type="button" class="btn btn--ghost btn--icon" id="farm-prev" aria-label="Previous farm">←</button>
+              <div class="farm-nav__meta">
+                <p class="farm-nav__id" id="farm-id">farm-01</p>
+                <p class="farm-nav__name" id="farm-name">—</p>
+              </div>
+              <button type="button" class="btn btn--ghost btn--icon" id="farm-next" aria-label="Next farm">→</button>
+            </div>
+
+            <div class="farm-dots" id="farm-dots" role="tablist" aria-label="Farm list"></div>
+
+            <dl class="crm" id="farm-crm"></dl>
+            <pre class="paste paste--note" id="farm-note"></pre>
+
+            <p class="fineprint">
+              Paste in order — do not hunt for the interesting ones. You may paste
+              several at once if that is how you would normally work.
+            </p>
+          </article>
+
+          <article class="panel panel--rules">
+            <h3>Three things while you work</h3>
+            <ul>
+              <li><strong>Do not sandbag it.</strong> Push the model, paste several farms at once, argue with its scoring. A rigged comparison teaches nothing and you would spot the rigging anyway.</li>
+              <li><strong>Count what you actually finish</strong> — profiled and scored, not started.</li>
+              <li><strong>Notice where the time goes.</strong> How much of the eight minutes was on farms, and how much was on the chat window — pasting, scrolling, re-explaining the rubric?</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <details class="details details--rubric">
+        <summary>The rubric, if you want to score properly</summary>
+        <div class="details__body">
+          <div class="rubric-grid" id="rubric-grid"></div>
+          <div id="rubric-notes"></div>
+        </div>
+      </details>
+    </section>
+
+    <section id="team" class="section">
+      <div class="section__head">
+        <p class="eyebrow">Part 2 · 4 minutes · together</p>
+        <h2>Meet the team you are about to hand it to</h2>
+        <p class="lede">
+          Three agents. Nobody wrote code to build them — each one is a page of
+          plain English saying who it is, what it is allowed to touch, and when
+          it must stop. That page is the whole design.
+        </p>
+      </div>
+
+      <div class="team-cards">
+        <article class="team-card team-card--researcher">
+          <p class="team-card__n">1</p>
+          <h3>farm-researcher</h3>
+          <p class="team-card__role">Reads · does not judge</p>
+          <p>
+            Takes a CRM row and a rep's call notes and turns them into a
+            structured profile. It is told to <strong>flag problems rather than
+            tidy them away</strong>: contradictions, missing information, unclear
+            authority, and any instruction not to contact the customer.
+          </p>
+          <p class="team-card__foot">Two copies run at once, five farms each.</p>
+        </article>
+
+        <article class="team-card team-card--scorer">
+          <p class="team-card__n">2</p>
+          <h3>fit-scorer</h3>
+          <p class="team-card__role">Scores · and refuses to</p>
+          <p>
+            Applies the rubric — and only the rubric. It also carries the rule
+            that decides this exercise: <strong>a farm carrying a flag is not
+            scored at all</strong>. Not scored low. Absent, with a written reason,
+            even if it would obviously rank first.
+          </p>
+          <p class="team-card__foot">Cannot start until all ten profiles exist.</p>
+        </article>
+
+        <article class="team-card team-card--writer">
+          <p class="team-card__n">3</p>
+          <h3>outreach-writer</h3>
+          <p class="team-card__role">Writes · to five people</p>
+          <p>
+            Drafts the outreach. It is given the ranked list <em>and</em> the
+            human-review list, so it knows who <strong>not</strong> to write to
+            rather than only who to write to. 120 words, one specific detail, one
+            small ask.
+          </p>
+          <p class="team-card__foot">Runs last, on the top five only.</p>
+        </article>
+      </div>
+
+      <div class="pipeline" aria-label="Agent pipeline">
+        <div class="pipeline__step">
+          <span class="pipeline__n">1</span>
+          <strong>research</strong>
+          <span>×2, in parallel</span>
+        </div>
+        <span class="pipeline__arrow" aria-hidden="true">→</span>
+        <div class="pipeline__step">
+          <span class="pipeline__n">2</span>
+          <strong>score</strong>
+          <span>waits for all ten</span>
+        </div>
+        <span class="pipeline__arrow" aria-hidden="true">→</span>
+        <div class="pipeline__step">
+          <span class="pipeline__n">3</span>
+          <strong>write</strong>
+          <span>top five only</span>
+        </div>
+      </div>
+
+      <ul class="agent-points">
+        <li><strong>No agent is the boss.</strong> There is no manager agent. The order is fixed by the person who set the team up: research, then score, then write.</li>
+        <li><strong>They never talk to each other.</strong> Every handoff is a file. One agent writes it, the next one reads it. That is the entire communication protocol, and it is why you can audit what happened.</li>
+        <li><strong>The judgement is in the writing, not the model.</strong> When you see it stop on a farm in a moment, the reason will be a sentence somebody typed — not something the model worked out.</li>
+      </ul>
+
+      <details class="details">
+        <summary>Go deeper — read the actual instruction files</summary>
+        <div class="details__body">
+          <p class="details__intro">
+            These are the three files, unedited. The rule that matters most is in
+            <code>fit-scorer</code>, under “Confidence, and when to stop scoring”.
+          </p>
+          <div class="agent-tabs" id="agent-tabs">
+            <div class="agent-tabs__list" role="tablist" aria-label="Agent definition files"></div>
+            <div class="agent-tabs__panels"></div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section id="run" class="section section--run">
+      <div class="section__head">
+        <p class="eyebrow">Part 3 · 5 minutes · watch</p>
+        <h2>Now hand it over</h2>
+        <p class="lede">
+          One instruction goes in. Nobody answers a question, approves a step, or
+          steers. Press play and watch the same task you just did get worked by
+          the team.
+        </p>
+      </div>
+
+      <article class="panel panel--prompt">
+        <div class="panel__bar">
+          <h3>The one thing a human typed</h3>
+          <span class="tag tag--quiet">then walked away</span>
+        </div>
+        <pre class="paste paste--compact" id="prompt-text">Work the full regional file in data/ — all 10 farms, none skipped.
+
+Split the farms into two batches of five and run two farm-researcher
+subagents in parallel, one per batch. When both have finished, run
+fit-scorer over the profiles, then run outreach-writer on the top five.
+
+Then give me a summary of no more than ten lines: the top five in order with
+their scores, how many farms went to human review and why, and the single
+thing in this file you would most want a person to look at before anything
+gets sent.
+
+Do not ask me for confirmation between steps. Go.</pre>
+      </article>
+
+      <div class="beats" id="run-beats" aria-label="What to watch for">
+        <p class="beats__label">Three things to watch for</p>
+        <ol class="beats__list">
+          <li class="beat" data-beat="parallel">
+            <span class="beat__dot" aria-hidden="true"></span>
+            <span class="beat__text"><strong>Two agents working at once.</strong> Not one thing after another.</span>
+          </li>
+          <li class="beat" data-beat="barrier">
+            <span class="beat__dot" aria-hidden="true"></span>
+            <span class="beat__text"><strong>The scorer is made to wait.</strong> Something is holding it back.</span>
+          </li>
+          <li class="beat" data-beat="stop">
+            <span class="beat__dot" aria-hidden="true"></span>
+            <span class="beat__text"><strong>The biggest account is thrown out.</strong> Watch for why.</span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="console" id="run-console">
+        <div class="console__chrome">
+          <div class="console__dots" aria-hidden="true"><span></span><span></span><span></span></div>
+          <p class="console__title">bayer-agent-lab — agent run</p>
+          <span class="console__badge" id="run-badge" title="A recording of a real run, replayed here so it works without accounts or wifi.">recorded run · replay</span>
+        </div>
+
+        <div class="console__bar">
+          <button type="button" class="btn btn--primary btn--small" id="run-start">▶ Run the team</button>
+          <button type="button" class="btn btn--ghost btn--small" id="run-restart" hidden>Restart</button>
+          <div class="console__clock">
+            <span class="console__elapsed" id="run-clock">0:00</span>
+            <span class="console__of">/ 3:32</span>
+          </div>
+          <div class="console__speeds" role="group" aria-label="Playback speed">
+            <button type="button" class="speed" data-speed="1">1×</button>
+            <button type="button" class="speed is-active" data-speed="2">2×</button>
+            <button type="button" class="speed" data-speed="4">4×</button>
+          </div>
+          <button type="button" class="btn btn--ghost btn--small" id="run-skip">Skip to the end</button>
+        </div>
+
+        <div class="console__progress" aria-hidden="true"><div class="console__progress-fill" id="run-progress"></div></div>
+
+        <div class="console__body">
+          <aside class="lanes" id="run-lanes" aria-label="Agents"></aside>
+
+          <div class="feed-wrap">
+            <div class="feed" id="run-feed" role="log" aria-live="polite" aria-label="Run activity">
+              <p class="feed__idle" id="run-idle">Waiting for the prompt. Press <strong>Run the team</strong>.</p>
+            </div>
+          </div>
+
+          <aside class="side" aria-label="What is being produced">
+            <div class="side__block">
+              <h4>Files written</h4>
+              <ul class="filelist" id="run-files"><li class="filelist__empty">none yet</li></ul>
+            </div>
+            <div class="side__block">
+              <h4>Scored</h4>
+              <ol class="rankmini" id="run-rank"><li class="rankmini__empty">none yet</li></ol>
+            </div>
+            <div class="side__block side__block--review">
+              <h4>Sent to human review</h4>
+              <ul class="reviewmini" id="run-review"><li class="reviewmini__empty">none yet</li></ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <div class="run-summary" id="run-summary" hidden>
+        <div class="run-summary__head">
+          <h3>Run complete</h3>
+          <p>You typed one thing. You were not asked a single question.</p>
+        </div>
+        <div class="run-summary__stats" id="run-summary-stats"></div>
+        <a class="btn btn--primary" href="#output">Now read what it produced →</a>
+      </div>
+    </section>
+
+    <section id="output" class="section">
+      <div class="section__head">
+        <p class="eyebrow">Part 4 · 6 minutes · in pairs</p>
+        <h2>Read it like it landed in your inbox</h2>
+        <p class="lede">
+          Three files came out. Turn to the person next to you and work the three
+          questions below. The reading is the exercise — the speed was the least
+          interesting part of what you just watched.
+        </p>
+      </div>
+
+      <div class="audit">
+        <article class="audit__q">
+          <p class="audit__n">Q1</p>
+          <p>Would you send those five outreach drafts as they are written?</p>
+        </article>
+        <article class="audit__q">
+          <p class="audit__n">Q2</p>
+          <p>
+            Four farms are on the human-review list. Which one would have done the
+            most damage if it had quietly been scored and mailed instead?
+          </p>
+        </article>
+        <article class="audit__q audit__q--key">
+          <p class="audit__n">Q3</p>
+          <p>
+            <strong>Why did the system stop on that farm?</strong> Not “how did it
+            know” — <em>where is the instruction that made it stop?</em>
+          </p>
+        </article>
+      </div>
+
+      <div class="outputs" id="outputs">
+        <div class="outputs__list" role="tablist" aria-label="Output files"></div>
+        <div class="outputs__panels"></div>
+      </div>
+
+      <details class="details">
+        <summary>Go deeper — if you finish early</summary>
+        <div class="details__body">
+          <ul class="deeper">
+            <li>
+              Find the four lines in <code>fit-scorer</code> that saved farm-09.
+              They are under “Confidence, and when to stop scoring”. Read them
+              aloud to your partner and decide who in a real company would have
+              had to write them.
+            </li>
+            <li>
+              Now break it on purpose. If you deleted the words <em>“even if it
+              would obviously rank first”</em>, what comes out of this run
+              instead — and who would have caught it?
+            </li>
+            <li>
+              The two researchers ran at the same time; the scorer was held back
+              until both finished. What would have been produced if nobody had
+              imposed that wait?
+            </li>
+          </ul>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      Every farm, person, note, and dollar figure in this lab is fictional and was
+      written for 15.S50. No Bayer proprietary information is used. The scenario
+      is drawn from a real strategic priority; the file is not.
+    </p>
+    <p class="footer__course">MIT Sloan · 15.S50 · Session 2 · in-class exercise</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="assets/farms.js"></script>
+  <script src="assets/agents.js"></script>
+  <script src="assets/sim-events.js"></script>
+  <script src="assets/sim-outputs.js"></script>
+  <script src="assets/lab.js"></script>
+  <script src="assets/sim-player.js"></script>
+</body>
+</html>

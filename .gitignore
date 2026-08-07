@@ -1,0 +1,15 @@
+# Agent run output — regenerated on every run, and reference-run/ is the copy
+# that is actually shown on the site.
+output/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.idea/
+.vscode/
+
+# Google Drive sync artefacts
+*.gdoc
+*.gsheet

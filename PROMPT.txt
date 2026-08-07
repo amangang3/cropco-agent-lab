@@ -1,0 +1,12 @@
+Work the full regional file in data/ — all 10 farms, none skipped.
+
+Split the farms into two batches of five and run two farm-researcher
+subagents in parallel, one per batch. When both have finished, run
+fit-scorer over the profiles, then run outreach-writer on the top five.
+
+Then give me a summary of no more than ten lines: the top five in order with
+their scores, how many farms went to human review and why, and the single
+thing in this file you would most want a person to look at before anything
+gets sent.
+
+Do not ask me for confirmation between steps. Go.

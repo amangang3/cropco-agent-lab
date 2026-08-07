@@ -1,0 +1,11 @@
+﻿farm_id,farm_name,state,county,total_acres,primary_crops,customer_status,years_as_customer,last_contact_date,current_supplier,est_annual_input_spend_usd,assigned_rep
+farm-01,Halverson Ridge Farms,IA,Story,6200,Corn; Soybeans,Prospect,0,2026-06-18,Competitor A,1240000,D. Okonkwo
+farm-02,Cottonwood Bend Ag,NE,Buffalo,4800,Corn; Soybeans,Customer,6,2026-07-02,Bayer (partial),910000,D. Okonkwo
+farm-03,Rio Seco Cotton Co,TX,Hale,7600,Cotton,Prospect,0,2026-07-08,Competitor C,1520000,A. Villanueva
+farm-04,Mueller Century Farm,MN,Renville,4300,Corn; Soybeans,Prospect,0,2026-05-21,Competitor B,860000,M. Ferreira
+farm-05,Redwater Farms Inc,ND,Cass,8200,Soybeans; Spring wheat; Canola,Customer,4,2026-07-15,Bayer (partial),1460000,D. Okonkwo
+farm-06,Blakemore Acres,MO,New Madrid,3700,Cotton; Soybeans; Corn,Prospect,0,2025-09-30,Unknown,0,unassigned
+farm-07,Vance Homestead Co,KY,Union,4600,Corn; Soybeans; Winter wheat,Prospect,0,2026-06-05,Competitor A,830000,T. Bhattacharya
+farm-08,Larkspur Field Systems,IL,Champaign,7300,Corn; Soybeans,Prospect,0,2026-07-14,Competitor B; direct,1580000,T. Bhattacharya
+farm-09,Willow Slough Partners,IN,Newton,8900,Corn; Soybeans,Customer,9,2026-05-19,Bayer,1720000,M. Ferreira
+farm-10,Salt Creek Ag Ventures,NE,Lincoln,7900,Corn; Soybeans,Prospect,0,2026-07-16,Competitor A; Competitor B,1590000,D. Okonkwo
