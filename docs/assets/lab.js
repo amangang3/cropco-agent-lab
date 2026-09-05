@@ -8,7 +8,7 @@
   }
 
   var farms = data.farms;
-  var STORAGE_KEY = "bayer-lab-done-v3";
+  var STORAGE_KEY = "cropco-lab-done-v3";
   var DURATION = 8 * 60; // seconds — the in-class round
 
   var state = {

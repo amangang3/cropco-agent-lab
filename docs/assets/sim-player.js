@@ -1,4 +1,4 @@
-/* Bayer Agent Lab — run player.
+/* CropCo Agent Lab — run player.
  *
  * Plays back SIM_EVENTS on a virtual clock so a room of thirty people can watch
  * the same agent run at the same time, without accounts, installs or wifi that

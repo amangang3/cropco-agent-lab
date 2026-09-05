@@ -1,4 +1,4 @@
-/* Bayer Agent Lab — simulation timeline.
+/* CropCo Agent Lab — simulation timeline.
  *
  * This is a faithful replay of a real run of the agent team, not an
  * illustration. Timings are the observed wall-clock of that run, rounded.
