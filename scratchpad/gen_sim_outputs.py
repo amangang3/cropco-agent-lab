@@ -7,7 +7,7 @@ embedded as strings rather than fetched.
 
 Source of truth is `reference-run/*.md`. Edit those, then run this.
 
-    OUT_DIR=/path/to/bayer-agent-lab python3 scratchpad/gen_sim_outputs.py
+    OUT_DIR=/path/to/cropco-agent-lab python3 scratchpad/gen_sim_outputs.py
 
 Also embeds the three agent definition files from `.claude/agents/`, so the
 "read the agent files" step of the exercise works offline too.

@@ -1,9 +1,10 @@
-# Bayer Agent Lab
+# CropCo Agent Lab
 
 Teaching lab for MIT Sloan **15.S50 · Leading Agentic AI Transformation in
-Organizations**, Session 2. A 30-minute in-class exercise in which students do a
-farm-prioritisation task by hand in their own chatbot, then watch a team of
-three agents do the same task.
+Organizations**, Session 2. A 30-minute take-home exercise in which students do
+a farm-prioritisation task by hand in their own chatbot, then watch a team of
+three agents do the same task. Students work through it on their own before the
+session; the session itself picks up their answers.
 
 **The exercise is the website in `docs/`.** Students need one URL and nothing
 else — no account, no install, no sign-in, no submission.
@@ -12,21 +13,27 @@ else — no account, no install, no sign-in, no submission.
 
 ## For students
 
-Open the lab URL your instructor posted. Everything is there: the situation, the
-brief to paste into your chatbot, the ten farms, the agent team, the run, and
-the three files it produces.
+Open the lab URL. Everything is there: the situation, the brief to paste into
+your chatbot, the ten farms, the agent team, the run, and the three files it
+produces. Set aside about half an hour and do it in one sitting, in order —
+Part 1 only works if you have not already seen the answer.
 
-Nothing you do on that page is recorded anywhere.
+Nothing you do on that page is recorded anywhere and there is nothing to submit.
+Bring your answers to the three questions in Part 4 to the session.
 
 ---
 
 ## For instructors
 
-**The teaching materials are deliberately not in this repository.** The runsheet,
-the live poll questions and their expected splits, the debrief script and the TA
-runbook are kept with the course materials instead — this repo is public so that
-students can reach the site, and the debrief gives away the farm-09 reveal that
-the exercise depends on.
+The lab is **assigned before the session** and students work it on their own;
+the session picks up their Part 4 answers and the count they reached in Part 1.
+
+**The teaching materials are deliberately not in this repository.** The session
+runsheet, the poll questions and their expected splits, and the debrief script
+are kept with the course materials instead — this repo is public so that students
+can reach the site, and the debrief gives away the farm-09 reveal that the
+exercise depends on. That matters more now that students work the lab
+unsupervised.
 
 Publishing: **Settings → Pages → Deploy from a branch**, `main`, folder
 `/docs`. Local preview is just `docs/index.html` opened in a browser — it is
@@ -65,12 +72,12 @@ not to be in.
 
 ## Running the agent team for real
 
-The website plays a **replay** of a real run so that a classroom does not depend
-on thirty laptops, thirty accounts and one wifi network. The run itself is real
-and still reproducible:
+The website plays a **replay** of a real run so that the exercise does not
+depend on each student having an account, an install and a spare rate limit. The
+run itself is real and still reproducible:
 
 ```bash
-cd bayer-agent-lab
+cd cropco-agent-lab
 claude
 ```
 
@@ -89,5 +96,5 @@ rather than by the model's judgement.
 ## On the data
 
 Every farm, person, place, figure and note in `data/` is fictional and was
-written for this exercise. No Bayer proprietary information is used. The
+written for this exercise. No CropCo proprietary information is used. The
 scenario is drawn from a real strategic priority; the file is not.

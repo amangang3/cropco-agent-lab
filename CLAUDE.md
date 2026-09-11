@@ -5,7 +5,7 @@ in Organizations*, Session 2.
 
 ## The scenario
 
-Bayer Crop Science reaches roughly 10,000 of the ~40,000 major row-crop farms in
+CropCo reaches roughly 10,000 of the ~40,000 major row-crop farms in
 the United States. Expanding that reach by quadrupling the field sales force is
 not viable. The commercial operations team is testing whether the account
 prioritisation work a field rep does by hand can be done differently.
@@ -41,5 +41,5 @@ Run `/agents` to see them.
 ## On the data
 
 Every farm, person, place, figure and note in `data/` is fictional and was
-written for this exercise. Nothing here is Bayer proprietary information and no
+written for this exercise. Nothing here is CropCo proprietary information and no
 real farming operation is described.

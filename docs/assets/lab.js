@@ -9,7 +9,7 @@
 
   var farms = data.farms;
   var STORAGE_KEY = "cropco-lab-done-v3";
-  var DURATION = 8 * 60; // seconds — the in-class round
+  var DURATION = 8 * 60; // seconds — the self-timed Part 1 round
 
   var state = {
     index: 0,
@@ -159,8 +159,8 @@
     if (state.remaining === 0) {
       stopTimer(true);
       els.timerHint.textContent =
-        "Time. Stop wherever you are, and hold on to the number you reached.";
-      showToast("Eight minutes — stop now");
+        "Time. Stop wherever you are, and write down the number you reached.";
+      showToast("Eight minutes — stop there");
     }
   }
 
@@ -195,7 +195,7 @@
     state.remaining = DURATION;
     renderTimer();
     els.timerHint.textContent =
-      "Start the timer when you paste the brief. Stop wherever you are when it hits zero.";
+      "Start the timer when you paste the brief. Stop wherever you are when it hits zero \u2014 you are not expected to finish.";
   }
 
   function renderProgress() {

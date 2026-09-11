@@ -31,7 +31,7 @@ asked me for a number.
 
 ### farm-02 — Cottonwood Bend Ag
 
-CRM: 4800 acres | Corn; Soybeans | Buffalo County, NE | Customer (6 yrs) | supplier: Bayer (partial) | est. annual spend: $910,000
+CRM: 4800 acres | Corn; Soybeans | Buffalo County, NE | Customer (6 yrs) | supplier: CropCo (partial) | est. annual spend: $910,000
 
 **Rep:** D. Okonkwo  
 **Location:** Buffalo County, NE  
@@ -90,7 +90,7 @@ right one is.
 
 ### farm-05 — Redwater Farms Inc
 
-CRM: 8200 acres | Soybeans; Spring wheat; Canola | Cass County, ND | Customer (4 yrs) | supplier: Bayer (partial) | est. annual spend: $1,460,000
+CRM: 8200 acres | Soybeans; Spring wheat; Canola | Cass County, ND | Customer (4 yrs) | supplier: CropCo (partial) | est. annual spend: $1,460,000
 
 **Rep:** D. Okonkwo  
 **Location:** Cass County, ND  
@@ -161,7 +161,7 @@ technical merit. Do not send a relationship pitch.
 
 ### farm-09 — Willow Slough Partners
 
-CRM: 8900 acres | Corn; Soybeans | Newton County, IN | Customer (9 yrs) | supplier: Bayer | est. annual spend: $1,720,000
+CRM: 8900 acres | Corn; Soybeans | Newton County, IN | Customer (9 yrs) | supplier: CropCo | est. annual spend: $1,720,000
 
 **Rep:** M. Ferreira  
 **Location:** Newton County, IN  

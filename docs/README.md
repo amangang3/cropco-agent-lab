@@ -6,7 +6,7 @@ step, no server, no API calls, no external dependencies beyond a webfont.
 ## Local preview
 
 Open `index.html` in a browser. That is genuinely all — it works from a local
-file, which is also the classroom fallback if GitHub Pages is unreachable.
+file, which is also the fallback if GitHub Pages is unreachable.
 
 If you would rather serve it:
 
@@ -51,13 +51,13 @@ rails as it goes.
 **It is a replay of a real run, and the console says so.** The timings, files,
 flags and scores in `sim-events.js` are the observed behaviour of an actual run
 of this agent team against this data. It is played back rather than executed
-live so the exercise cannot be broken by a classroom's wifi, a student's
-account, or a rate limit — and so a non-technical student can follow it with the
-three "what to watch for" prompts rather than a terminal.
+live so the exercise cannot be broken by a student's account, an install, or a
+rate limit — and so a non-technical student can follow it with the three "what
+to watch for" prompts rather than a terminal.
 
 Do not remove the `recorded run · replay` badge. Students asking what they are
-actually being shown is the instinct the session exists to build; an instructor
-caught overstating it loses the room.
+actually being shown is the instinct the course exists to build, and a lab
+caught overstating what it did loses their trust.
 
 ### Editing the timeline
 

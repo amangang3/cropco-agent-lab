@@ -1,10 +1,10 @@
 # Round 1 — do the task yourself, in a chat window
 
-**Time: 8 minutes. Stop when time is called, wherever you have got to.**
+**Time: 8 minutes. Set a timer, and stop when it goes, wherever you have got to.**
 
 Stopping on time matters more than finishing. You are not expected to finish.
 
-> **In class, use the website instead.** The lab site has this brief with a copy
+> **Use the lab website instead if you can.** It has this brief with a copy
 > button, the ten farms one at a time, a countdown, and a completed-farms
 > counter. This file is the same material in plain markdown, for anyone working
 > offline or reading the repository directly.
@@ -27,7 +27,7 @@ sandbag it.
 
 ## The brief — paste this
 
-> I'm a commercial operations analyst at Bayer Crop Science. I have a regional
+> I'm a commercial operations analyst at CropCo. I have a regional
 > file of 10 US farms. For each one I have a CRM row and a set of field-rep
 > call notes written by four different reps over the last eighteen months.
 >
@@ -53,7 +53,7 @@ Then paste the notes from `notes-to-paste.md`, and go.
    re-explaining the rubric, reminding it of something it had already been
    told.
 
-The first poll asks about the first one.
+Bring the first number with you — we will compare them in the session.
 
 ---
 
@@ -64,4 +64,4 @@ The first poll asks about the first one.
   work: copy, paste, read, respond.
 - **Do** use it properly. Ask it to do several farms at once if you want. That
   is a fair thing to try and what happens when you try is part of the point.
-- **Do** stop when time is called.
+- **Do** stop when your timer goes.
